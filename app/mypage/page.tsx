@@ -16,8 +16,10 @@ const Page = () => {
   return (
     <>
       <AlertDialog>
-        <AlertDialogTrigger>
-          <Button variant="outline">Click me</Button>
+        <AlertDialogTrigger asChild>
+          <Button variant="outline" className="mt-1">
+            Click me
+          </Button>
         </AlertDialogTrigger>
         <AlertDialogContent>
           <AlertDialogHeader>
