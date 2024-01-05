@@ -31,8 +31,8 @@ import {
 const Page = () => {
   return (
     <>
-      <div className="container mt-5">
-        <Card className="max-w-md m-auto">
+      <div className="container mt-5 max-w-md m-auto">
+        <Card className="mb-4">
           <CardHeader>
             <CardTitle>Card Title</CardTitle>
             <CardDescription>Card Description</CardDescription>
@@ -45,7 +45,7 @@ const Page = () => {
           </CardFooter>
         </Card>
 
-        <Accordion type="single" collapsible>
+        <Accordion type="single" collapsible className="mb-4">
           <AccordionItem value="item-1">
             <AccordionTrigger>Q&A</AccordionTrigger>
             <AccordionContent>Answer</AccordionContent>
@@ -54,7 +54,7 @@ const Page = () => {
 
         <AlertDialog>
           <AlertDialogTrigger asChild>
-            <Button variant="outline" className="mt-1">
+            <Button variant="outline" className="mb-4">
               Click me
             </Button>
           </AlertDialogTrigger>
