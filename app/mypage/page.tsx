@@ -21,6 +21,13 @@ import {
   CardTitle
 } from '@/components/ui/card'
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger
+} from '@/components/ui/accordion'
+
 const Page = () => {
   return (
     <>
@@ -37,6 +44,14 @@ const Page = () => {
             <p>Card Footer</p>
           </CardFooter>
         </Card>
+
+        <Accordion type="single" collapsible>
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Q&A</AccordionTrigger>
+            <AccordionContent>Answer</AccordionContent>
+          </AccordionItem>
+        </Accordion>
+
         <AlertDialog>
           <AlertDialogTrigger asChild>
             <Button variant="outline" className="mt-1">
