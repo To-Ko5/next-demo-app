@@ -28,6 +28,8 @@ import {
   AccordionTrigger
 } from '@/components/ui/accordion'
 
+import { ScrollArea } from '@/components/ui/scroll-area'
+
 const Page = () => {
   return (
     <>
@@ -51,6 +53,13 @@ const Page = () => {
             <AccordionContent>Answer</AccordionContent>
           </AccordionItem>
         </Accordion>
+
+        <ScrollArea className="h-[100px] w-[350px] rounded-md border p-4 mb-4">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. In culpa
+          assumenda qui minima! Officia deleniti qui, minima laborum illum
+          adipisci quia, sequi necessitatibus, quibusdam magni culpa nam? Sit,
+          temporibus dignissimos? stop.
+        </ScrollArea>
 
         <AlertDialog>
           <AlertDialogTrigger asChild>
