@@ -30,9 +30,14 @@ import {
 
 import { ScrollArea } from '@/components/ui/scroll-area'
 
+import { Switch } from '@/components/ui/switch'
+
 const Page = () => {
   return (
     <>
+      <div className="container mt-5">
+        <Switch />
+      </div>
       <div className="container mt-5 max-w-md m-auto">
         <Card className="mb-4">
           <CardHeader>
