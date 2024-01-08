@@ -31,12 +31,13 @@ import {
 import { ScrollArea } from '@/components/ui/scroll-area'
 
 import { Switch } from '@/components/ui/switch'
+import ThemeSwitching from '@/components/original/theme-switching'
 
 const Page = () => {
   return (
     <>
       <div className="container mt-5">
-        <Switch />
+        <ThemeSwitching />
       </div>
       <div className="container mt-5 max-w-md m-auto">
         <Card className="mb-4">
