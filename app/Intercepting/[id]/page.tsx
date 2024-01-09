@@ -1,7 +1,11 @@
-import React from 'react'
+import PhotoDetails from '@/components/original/photo-details'
 
 const page = () => {
-  return <div>Intercepting Routes</div>
+  return (
+    <div>
+      <PhotoDetails />
+    </div>
+  )
 }
 
 export default page
