@@ -41,6 +41,8 @@ import {
   CarouselPrevious
 } from '@/components/ui/carousel'
 
+import Link from 'next/link'
+
 const Page = () => {
   return (
     <>
@@ -107,10 +109,12 @@ const Page = () => {
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
                 <div className="p-1">
                   <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                      <span className="text-3xl font-semibold">
-                        {index + 1}
-                      </span>
+                    <CardContent className="flex aspect-square items-center justify-center">
+                      <Link href={`/detail/${index + 1}`} scroll={false}>
+                        <span className="text-3xl font-semibold ">
+                          {index + 1}
+                        </span>
+                      </Link>
                     </CardContent>
                   </Card>
                 </div>
