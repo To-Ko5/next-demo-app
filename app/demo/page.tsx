@@ -42,6 +42,7 @@ import {
 } from '@/components/ui/carousel'
 
 import Link from 'next/link'
+import { contents } from '@/lib/contents'
 
 const Page = () => {
   return (
@@ -105,17 +106,24 @@ const Page = () => {
           className="w-full max-w-sm"
         >
           <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+            {contents.map((content) => (
+              <CarouselItem
+                key={content.num}
+                className="md:basis-1/2 lg:basis-1/2"
+              >
                 <div className="p-1">
                   <Card>
-                    <CardContent className="flex aspect-square items-center justify-center">
-                      <Link href={`/detail/${index + 1}`} scroll={false}>
+                    <Link
+                      href={`/detail/${content.num}`}
+                      scroll={false}
+                      className=""
+                    >
+                      <CardContent className="flex aspect-square items-center justify-center">
                         <span className="text-3xl font-semibold ">
-                          {index + 1}
+                          {content.num}
                         </span>
-                      </Link>
-                    </CardContent>
+                      </CardContent>
+                    </Link>
                   </Card>
                 </div>
               </CarouselItem>
