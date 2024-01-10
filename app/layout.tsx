@@ -21,7 +21,7 @@ export default function RootLayout({ children, modal }: Layout) {
     <>
       <html lang="ja" suppressHydrationWarning={true}>
         <head />
-        <body>
+        <body suppressHydrationWarning={true}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
