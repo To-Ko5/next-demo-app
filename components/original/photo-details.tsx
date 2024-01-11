@@ -1,16 +1,16 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
+import { contents } from '@/lib/contents'
+import { useParams, useRouter } from 'next/navigation'
 
 const PhotoDetails = () => {
+  const params = useParams()
+  const id = Number(params.id)
   return (
-    <div>
-      <Image
-        src={'/next.svg'}
-        width={600}
-        height={600}
-        alt={'next.js'}
-        className="h-[750px] w-[750px] object-cover"
-      />
+    <div className="container mx-auto mt-8">
+      <h1>{contents[id - 1].num}</h1>
+      <p> {contents[id - 1].detail}</p>
     </div>
   )
 }

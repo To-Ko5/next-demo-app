@@ -15,10 +15,19 @@ import {
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { contents } from '@/lib/contents'
 
-const Page = ({ children }: { children: ReactNode }) => {
+const Page = ({
+  params,
+  children
+}: {
+  params: { id: number }
+  children: ReactNode
+}) => {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(true)
+
+  const id = Number(params.id)
 
   const handleClick = () => {
     setIsOpen(false)
@@ -29,10 +38,9 @@ const Page = ({ children }: { children: ReactNode }) => {
     <AlertDialog open={isOpen} onOpenChange={handleClick}>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogTitle>{contents[id - 1].num}</AlertDialogTitle>
           <AlertDialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
+            {contents[id - 1].detail}
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
