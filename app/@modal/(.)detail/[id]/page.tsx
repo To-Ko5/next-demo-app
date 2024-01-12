@@ -2,18 +2,13 @@
 
 import React, { ReactNode, useState } from 'react'
 import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger
-} from '@/components/ui/alert-dialog'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger
+} from '@/components/ui/dialog'
 import { useRouter } from 'next/navigation'
 import { contents } from '@/lib/contents'
 
@@ -30,25 +25,21 @@ const Page = ({
   const id = Number(params.id)
 
   const handleClick = () => {
+    console.log('ccc')
     setIsOpen(false)
     router.back()
   }
 
   return (
-    <AlertDialog open={isOpen} onOpenChange={handleClick}>
-      <AlertDialogContent>
-        <AlertDialogHeader>
-          <AlertDialogTitle>{contents[id - 1].num}</AlertDialogTitle>
-          <AlertDialogDescription>
-            {contents[id - 1].detail}
-          </AlertDialogDescription>
-        </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction>Continue</AlertDialogAction>
-        </AlertDialogFooter>
-      </AlertDialogContent>
-    </AlertDialog>
+    <Dialog open={isOpen} onOpenChange={handleClick}>
+      <DialogTrigger>Open</DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>{contents[id - 1].num}</DialogTitle>
+          <DialogDescription>{contents[id - 1].detail}</DialogDescription>
+        </DialogHeader>
+      </DialogContent>
+    </Dialog>
   )
 }
 
