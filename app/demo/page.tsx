@@ -43,6 +43,7 @@ import {
 
 import Link from 'next/link'
 import { contents } from '@/lib/contents'
+import { Input } from '@/components/ui/input'
 
 const Page = () => {
   return (
@@ -103,7 +104,7 @@ const Page = () => {
           opts={{
             align: 'start'
           }}
-          className="w-full max-w-sm"
+          className="w-full max-w-sm mb-4"
         >
           <CarouselContent>
             {contents.map((content) => (
@@ -132,6 +133,8 @@ const Page = () => {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
+
+        <Input />
       </div>
     </>
   )
