@@ -3,6 +3,7 @@
 import React, { ReactNode, useState } from 'react'
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogHeader,
@@ -11,6 +12,7 @@ import {
 } from '@/components/ui/dialog'
 import { useRouter } from 'next/navigation'
 import { contents } from '@/lib/contents'
+import { Button } from '@/components/ui/button'
 
 const Page = ({
   params,
@@ -38,6 +40,11 @@ const Page = ({
           <DialogTitle>{contents[id - 1].num}</DialogTitle>
           <DialogDescription>{contents[id - 1].detail}</DialogDescription>
         </DialogHeader>
+        <DialogClose asChild>
+          <Button type="button" variant="secondary">
+            Close
+          </Button>
+        </DialogClose>
       </DialogContent>
     </Dialog>
   )
