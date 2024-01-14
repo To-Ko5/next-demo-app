@@ -134,7 +134,24 @@ const Page = () => {
           <CarouselNext />
         </Carousel>
 
-        <Input placeholder="入力欄" />
+        <Input placeholder="入力欄" className="mb-4" />
+
+        <ScrollArea
+          scrollHideDelay={1000}
+          className="h-[200px] rounded-md border p-4"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
+          soluta accusamus nulla unde molestias autem quidem nemo excepturi
+          temporibus ducimus laudantium odio deserunt voluptas dolor maiores,
+          eius perspiciatis nobis sint? Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Corrupti soluta accusamus nulla unde molestias autem
+          quidem nemo excepturi temporibus ducimus laudantium odio deserunt
+          voluptas dolor maiores, eius perspiciatis nobis sint? Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Corrupti soluta
+          accusamus nulla unde molestias autem quidem nemo excepturi temporibus
+          ducimus laudantium odio deserunt voluptas dolor maiores, eius
+          perspiciatis nobis sint?
+        </ScrollArea>
       </div>
     </>
   )
