@@ -134,7 +134,7 @@ const Page = () => {
           <CarouselNext />
         </Carousel>
 
-        <Input />
+        <Input placeholder="入力欄" />
       </div>
     </>
   )
