@@ -44,6 +44,7 @@ import {
 import Link from 'next/link'
 import { contents } from '@/lib/contents'
 import { Input } from '@/components/ui/input'
+import { Slider } from '@/components/ui/slider'
 
 const Page = () => {
   return (
@@ -138,7 +139,7 @@ const Page = () => {
 
         <ScrollArea
           scrollHideDelay={1000}
-          className="h-[200px] rounded-md border p-4"
+          className="h-[200px] rounded-md border p-4 mb-4"
         >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
           soluta accusamus nulla unde molestias autem quidem nemo excepturi
@@ -152,6 +153,8 @@ const Page = () => {
           ducimus laudantium odio deserunt voluptas dolor maiores, eius
           perspiciatis nobis sint?
         </ScrollArea>
+
+        <Slider defaultValue={[33]} max={100} step={1} />
       </div>
     </>
   )
