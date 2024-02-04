@@ -27,7 +27,6 @@ const Page = ({
   const id = Number(params.id)
 
   const handleClick = () => {
-    console.log('ccc')
     setIsOpen(false)
     router.back()
   }
